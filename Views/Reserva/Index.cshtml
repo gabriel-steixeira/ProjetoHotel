@@ -1,0 +1,17 @@
+﻿@model IEnumerable<ProjetoHotel.Models.Suite>
+
+@{
+    Layout = "~/Views/LayoutView.cshtml";
+    ViewBag.Title = "Página Inicial";
+}
+
+<h1>Olá, seja bem-vindo!</h1>
+
+<p>Reserve sua hospedagem conosco, temos diversas suítes à sua disposição!</p>
+
+@foreach (var item in Model)
+{
+    <div>
+        <p>Suíte @item.TipoSuite, com capacidade para @item.Capacidade pessoas, o valor da diária é de: @item.ValorDiaria.ToString("C")</p>
+    </div>
+}
